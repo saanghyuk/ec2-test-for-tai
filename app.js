@@ -5,7 +5,11 @@ const cors = require("cors");
 
 app.use(cors());
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/main.html");
+  res.sendFile(__dirname + "/index.html");
+});
+
+app.get("/members", (req, res) => {
+  console.log("TEST");
 });
 
 app.listen(3000, () => {
