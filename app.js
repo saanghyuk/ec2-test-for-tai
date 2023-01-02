@@ -8,21 +8,22 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  console.log(__dirname);
   res.sendFile(__dirname + "/index.html");
 });
 
 // GET: 전체 직원 정보 조회 (후에 팀 별 )
 app.get("/api/members", (req, res) => {
-  console.log(req.query);
-  console.log(req.query);
+  // console.log(req.query);
+  // console.log(req.query);
   const { team } = req.query;
   // case sensitive
   if (team) {
     const teamMembers = members.filter(m => m.team == team);
     res.send(teamMembers);
+    return;
   } else {
     res.send(members);
+    return;
   }
   res.send(members);
 });
