@@ -5,27 +5,26 @@ const cors = require("cors");
 let members = require("./members");
 
 app.use(cors());
-app.use(express.json());
+
+// POST 할때 들어오는 JSON받을 수 있게 필요하다.
+// app.use(express.json());
 
 app.get("/", (req, res) => {
+  console.log("/");
   res.sendFile(__dirname + "/index.html");
 });
 
 // GET: 전체 직원 정보 조회 (후에 팀 별 )
 app.get("/api/members", (req, res) => {
   // console.log(req.query);
-  // console.log(req.query);
   const { team } = req.query;
   // case sensitive
   if (team) {
     const teamMembers = members.filter(m => m.team == team);
     res.send(teamMembers);
-    return;
   } else {
     res.send(members);
-    return;
   }
-  res.send(members);
 });
 
 // GET: id별 비밀번호 조회
@@ -42,6 +41,7 @@ app.get("/api/members/:id", (req, res) => {
 // POST: 새로운 멤버 추가
 app.post("/api/members", (req, res) => {
   const newMember = req.body;
+  console.log(req.body);
   members.push(newMember);
   res.send(newMember);
 });
