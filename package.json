@@ -1,0 +1,22 @@
+{
+  "name": "ec2-test-dir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "members.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saanghyuk/ec2-test-for-tai.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/saanghyuk/ec2-test-for-tai/issues"
+  },
+  "homepage": "https://github.com/saanghyuk/ec2-test-for-tai#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
