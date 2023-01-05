@@ -1,0 +1,46 @@
+GET http://localhost:3000/api/members 
+
+
+### 
+
+POST http://localhost:3000/api/members 
+Content-Type : application/json
+
+{
+  "id": 10, 
+  "name": "sojeen", 
+  "team": "Customer Success", 
+  "position" : "Team Lead", 
+  "emailAddress" : "sojeen@ab180.co"  
+}
+
+###
+
+POST http://localhost:3000/api/members/
+Content-Type: application/json
+
+{
+  "id": 10,
+  "name": "sojeen",
+  "team": "Customer Success",
+  "position" : "Team Lead",
+  "emailAddress" : "sojeen@ab180.co"
+}
+
+
+###
+PUT http://localhost:3000/api/members/3 
+Content-Type : application/json
+
+{
+  "team" : "enablement"  
+}
+
+
+###
+PUT http://localhost:3000/api/members/3
+Content-Type : application/json
+
+{
+  "team" : "enablement"  
+}
