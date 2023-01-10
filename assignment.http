@@ -1,0 +1,29 @@
+POST https://front-api.airbridge.io/api/search/v1/user-guide
+Content-Type : application/json
+
+{
+  "query" : "Facebook", 
+  "locale" : "ko"
+}
+
+
+###
+POST https://front-api.airbridge.io/api/search/v1/developer-guide
+Content-Type : application/json
+
+{
+  "query" : "Facebook", 
+  "locale" : "ko"
+}
+
+
+### 
+POST https://front-api.airbridge.io/api/search/v1/all
+Content-Type : application/json
+
+{
+  "query" : "Facebook", 
+  "locale" : "en"
+}
+
+
