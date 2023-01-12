@@ -1,4 +1,4 @@
-GET http://52.78.205.70/api/members
+GET http://127.0.0.1:3000/api/members
 
 
 ### 
@@ -33,7 +33,7 @@ PUT http://localhost:3000/api/members/3
 Content-Type : application/json
 
 {
-  "team" : "enablement"  
+  "team" : "CS"  
 }
 
 
